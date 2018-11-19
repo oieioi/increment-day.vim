@@ -11,9 +11,12 @@ function! ReadWordAndIncrementDay()
   let next = IncrementDate(current)
   if next != ''
     execute ":normal ciw" . next
+  else
+    " if no result, default <C-a>
+    execute ":normal! \<C-a>"
   endif
 endfunction
 
 command! IncrementDate call ReadWordAndIncrementDay()
 " FIXME: ここに書いていいものなのか？
-nnoremap <Space><C-a> :IncrementDate<CR>
+nnoremap <C-a> :IncrementDate<CR>
