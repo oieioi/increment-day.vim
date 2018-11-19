@@ -5,7 +5,6 @@ Increment day
 
 on a word, `<Space><C-a>` and the word:
 
-sun -> mon
-mon -> tue
-月 -> 火
-...
+- sun -> mon -> tue -> ...
+- 月 -> 火 -> 水 -> ...
+
