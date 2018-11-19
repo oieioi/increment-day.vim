@@ -1,10 +1,11 @@
-Increment Day for Vim
+increment-day.vim
 ======================
 
-Increment day
+Increment the day of the week.
 
-on a word, `<C-a>` and the word:
+You execute `<C-a>` on a word, this script replaces it with next day:
 
 - sun -> mon -> tue -> ...
 - 月 -> 火 -> 水 -> ...
 
+If the next day is not found, this executes default `<C-a>`.
