@@ -20,7 +20,11 @@ function! ReadWordAndIncrementOrDecrementDay(should_add)
     execute ":normal ciw" . next
   else
     " if no result, default <C-a>
-    execute ":normal! \<C-a>"
+    if a:should_add
+      execute ":normal! \<C-a>"
+    else
+      execute ":normal! \<C-x>"
+    end
   endif
 endfunction
 
