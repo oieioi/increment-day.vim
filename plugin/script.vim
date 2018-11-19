@@ -1,7 +1,8 @@
+let s:file_path = expand('<sfile>:p:h')
+
 function! IncrementDate(date)
-  let file_path = expand('<sfile>:p:h')
   " FXIME: Vim scriptでかく
-  let command = 'ruby ' . file_path . '/plugin/next_youbi.rb ' . a:date
+  let command = 'ruby ' . s:file_path . '/next_youbi.rb ' . a:date
   return system(command)
 endfunction
 
