@@ -21,7 +21,7 @@ class Youbi
 
   def number_and_lang(day_s)
     expressions.each { |lang_name, days|
-      index = days.find_index(day_s.downcase)
+      index = days.find_index(day_s)
       next if index.nil?
       return [index, lang_name]
     }
@@ -31,8 +31,11 @@ class Youbi
   def expressions
     {
       ja: %w[日 月 火 水 木 金 土],
+      ja_long: %w[日曜日 月曜日 火曜日 水曜日 木曜日 金曜日 土曜日],
       hiragana: %w[にちようび かようび すいようび もくようび きんようび どようび],
-      en: %w[sun mon tue wed thu fri sat]
+      en_down: %w[sun mon tue wed thu fri sat],
+      en_pascal: %w[Sun Mon Tue Wed Thu Fri Sat],
+      en_full: %w[Sunday Monday Tuesday Wednesday Thursday Friday Saturday],
     }
   end
 end
