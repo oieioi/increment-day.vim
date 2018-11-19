@@ -31,6 +31,5 @@ endfunction
 command! IncrementDay call ReadWordAndIncrementOrDecrementDay(1)
 command! DecrementDay call ReadWordAndIncrementOrDecrementDay(0)
 
-" FIXME: ここに書いていいものなのか？
-nnoremap <C-a> :IncrementDay<CR>
-nnoremap <C-x> :DecrementDay<CR>
+"nnoremap <C-a> :IncrementDay<CR>
+"nnoremap <C-x> :DecrementDay<CR>

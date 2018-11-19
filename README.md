@@ -9,3 +9,17 @@ You execute `<C-a>` on a word, this script replaces it with next day:
 - 月 -> 火 -> 水 -> ...
 
 If the next day is not found, this executes default `<C-a>`.
+
+Install
+--------
+
+dein.vim
+
+```
+[[plugins]]
+  repo = 'oieioi/increment-day.vim'
+  hook_add = '''
+    nnoremap <C-a> :IncrementDay<CR>
+    nnoremap <C-x> :DecrementDay<CR>
+  '''
+```
