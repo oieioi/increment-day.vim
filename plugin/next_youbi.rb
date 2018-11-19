@@ -1,4 +1,7 @@
 #! /usr/bin/env ruby
+# USAGE:
+# ruby ./next_youbi.rb tue #=> wed
+# ruby ./next_youbi.rb tue -d #=> mon
 
 class Youbi
   def initialize(day_s)
@@ -13,6 +16,14 @@ class Youbi
     @number += 1
     if to_s.nil?
       @number = 0
+    end
+    @number
+  end
+
+  def decrement!
+    @number -= 1
+    if @number < 0
+      @number = 6
     end
     @number
   end
@@ -40,20 +51,13 @@ class Youbi
   end
 end
 
-def increment_day(day)
+def increment_or_decrement_day(day, should_add = true)
   d = Youbi.new(day)
-  d.increment!
+  d.increment! if should_add
+  d.decrement! unless should_add
   d.to_s
 rescue StandardError
   nil
 end
 
-print increment_day(ARGV[0])
-
-# test
-#((%w[月 火 水 木 金 土 日 月] + [nil]) + %w[mon tue wed thu fri sat sun mon]).each_cons(2) do |a, b|
-#  next if b.nil? || a.nil?
-#  if increment_day(a) != b
-#    raise "fail #{a} #{b}"
-#  end
-#end
+print increment_or_decrement_day(ARGV[0], ARGV[1].nil?)
