@@ -10,7 +10,7 @@ You execute `<C-a>` on a word, this script replaces it with the next day:
 - `sun` -> `mon` -> `tue` -> ...
 - `月` -> `火` -> `水` -> ...
 
-If the next day is not found, this executes default `<C-a>` (sorry, this feature is buggy. :cold_sweat:).
+If the next day is not found, this executes default `<C-a>` (this feature is buggy :cold_sweat:).
 
 Install
 --------
@@ -25,3 +25,9 @@ hook_add = '''
   nnoremap <C-x> :DecrementDay<CR>
 '''
 ```
+
+Dependency
+----------
+
+- Ruby >= 2.4
+
