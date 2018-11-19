@@ -41,9 +41,11 @@ def increment_day(day)
   d = Youbi.new(day)
   d.increment!
   d.to_s
+rescue StandardError
+  nil
 end
 
-puts increment_day(ARGV[0])
+print increment_day(ARGV[0])
 
 # test
 #((%w[月 火 水 木 金 土 日 月] + [nil]) + %w[mon tue wed thu fri sat sun mon]).each_cons(2) do |a, b|
