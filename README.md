@@ -17,11 +17,11 @@ Install
 
 dein.vim
 
-```
+```toml:your_dein.toml
 [[plugins]]
-  repo = 'oieioi/increment-day.vim'
-  hook_add = '''
-    nnoremap <C-a> :IncrementDay<CR>
-    nnoremap <C-x> :DecrementDay<CR>
-  '''
+repo = 'oieioi/increment-day.vim'
+hook_add = '''
+  nnoremap <C-a> :IncrementDay<CR>
+  nnoremap <C-x> :DecrementDay<CR>
+'''
 ```
