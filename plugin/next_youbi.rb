@@ -1,7 +1,7 @@
 #! /usr/bin/env ruby
 # USAGE:
-# ruby ./next_youbi.rb tue #=> wed
-# ruby ./next_youbi.rb tue -d #=> mon
+#   ruby ./next_youbi.rb tue #=> wed
+#   ruby ./next_youbi.rb tue -d #=> mon
 
 class Youbi
   def initialize(day_s)
