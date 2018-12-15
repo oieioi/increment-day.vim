@@ -17,7 +17,8 @@ function! ReadWordAndIncrementOrDecrementDay(should_add)
   let next = IncrementOrDecrementDay(current, a:should_add)
 
   if next != ''
-    execute ":normal ciw" . next
+    " to black hole register
+    execute ':normal "_ciw' . next
   else
     " if no result, default <C-a>
     if a:should_add
